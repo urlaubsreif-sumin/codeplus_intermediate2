@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.Deque;
 import java.util.StringTokenizer;
 
+//범죄자1, 범죄자2, 임의의 외부 사람이 한 곳에서 만날 때 -> 열고 오는 문의 개수의 합
+//이렇게 하면 범죄자 1과 범죄자2가 똑같은 문을 여는 경우 중복 방지
+//만나는 지점이 문일 경우 -2
 public class Main {
 	static People first;
 	static People second;
@@ -49,7 +52,7 @@ public class Main {
 				
 				
 				
-				int min = 200;
+				int min = 10000;
 				for(int i = 0; i < h + 2; i++) {
 					for(int j = 0; j < w + 2; j++) {
 						if(arr[i][j] == 1)
