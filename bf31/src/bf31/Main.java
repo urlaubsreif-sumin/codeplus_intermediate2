@@ -25,7 +25,7 @@ public class Main {
 			int min = 0;
 			while(L >= 0 && R < N) {
 				if(sum >= S) {
-					System.out.println(L + " " + R + " " + len);
+					//System.out.println(L + " " + R + " " + len);
 					if(min == 0 || min > len) {
 						min = len;
 					}
