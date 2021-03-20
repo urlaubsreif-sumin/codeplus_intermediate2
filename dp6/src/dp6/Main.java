@@ -32,12 +32,12 @@ public class Main {
 	}
 	
 	public static int go(int s, int e) {
+		if(s == e || d[s][e] != 0) {
+			return d[s][e];
+		}
 		if(s + 1 == e) {
 			d[s][e] = arr[s] + arr[e];
 			return arr[s] + arr[e];
-		}
-		if(s == e || d[s][e] != 0) {
-			return d[s][e];
 		}
 		int sum = 0;
 		for(int i = s; i <= e; i++) {
