@@ -14,17 +14,17 @@ public class Main {
 			n = Integer.parseInt(st.nextToken());
 			m = Integer.parseInt(st.nextToken());
 			arr = new int[n];
-			d = new long[n][m + 2];
+			d = new long[n + 1][m + 2];
 			
 			for(int i = 0; i < n; i++) {
 				arr[i] = Integer.parseInt(br.readLine());
 			}
 			
-			for(int i = 0; i < n; i++) {
+			for(int i = 0; i < n + 1; i++) {
 				Arrays.fill(d[i], -1);
 			}
 			
-			long res = go(0, arr[0] + 1);
+			long res = go(1, arr[0] + 1);
 			
 			System.out.println(res);
 			
@@ -35,7 +35,7 @@ public class Main {
 	}
 	
 	public static long go(int i, int j) {
-		if(i == n - 1) {
+		if(i == n) {
 			return 0;
 		}
 		if(d[i][j] != -1)
